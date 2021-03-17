@@ -11,31 +11,36 @@ using System.Threading.Tasks;
 
 namespace ProyectoTallerAutos.Servicios.Servicios.Modelos
 {
-    public class ServicioTipoVehiculos : IServicioTipoVehiculos
+    public class ServicioEstados : IServicioEstados
     {
-        private IRepositorioTipoVehiculos _repositorio;
+        private IRepositorioEstados _repositorio;
         private ConexionBd _conexionBd;
         public void Borrar(int id)
         {
             throw new NotImplementedException();
         }
 
-        public bool EstaRelacionado(TipoVehiculo tipo)
+        public bool EstaRelacionado(Estado estado)
         {
             throw new NotImplementedException();
         }
 
-        public bool Existe(TipoVehiculo tipo)
+        public bool Existe(Estado estado)
         {
             throw new NotImplementedException();
         }
 
-        public List<TipoVehiculo> GetLista()
+        public Estado GetEstadoPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Estado> GetLista()
         {
             try
             {
                 _conexionBd = new ConexionBd();
-                _repositorio = new RepositorioTipoVehiculos(_conexionBd.AbrirConexion());
+                _repositorio = new RepositorioEstados(_conexionBd.AbrirConexion());
                 var lista = _repositorio.GetLista();
                 return lista;
             }
@@ -46,12 +51,7 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Modelos
             }
         }
 
-        public TipoVehiculo GetTipoPorId(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Guardar(TipoVehiculo tipo)
+        public void Guardar(Estado estado)
         {
             throw new NotImplementedException();
         }

@@ -32,5 +32,11 @@ namespace ProyectoTallerAutos.Windows.Modelos
             frmMarcas frm = new frmMarcas();
             frm.ShowDialog(this);
         }
+
+        private void tipoDeVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTipoVehiculo frm = new frmTipoVehiculo();
+            frm.ShowDialog(this);
+        }
     }
 }

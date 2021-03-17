@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProyectoTallerAutos.Entidades.Entidades
 {
-    public class TipoVehiculo
+    public class Estado
     {
-        public int TipoVehiculoId { get; set; }
+        public int EstadoId { get; set; }
         public string Descripcion { get; set; }
     }
 }

@@ -85,6 +85,12 @@
     <Compile Include="FichasAutos\FrmFichasAutos.Designer.cs">
       <DependentUpon>FrmFichasAutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstado.Designer.cs">
+      <DependentUpon>FrmEstado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FichasAutos\FrmFichasAutos.resx">
       <DependentUpon>FrmFichasAutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstado.resx">
+      <DependentUpon>FrmEstado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal01.resx">
       <DependentUpon>frmMenuPrincipal01.cs</DependentUpon>

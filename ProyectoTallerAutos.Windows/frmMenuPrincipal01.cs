@@ -40,5 +40,11 @@ namespace ProyectoTallerAutos.Windows
             frmModelos frm = new frmModelos();
             frm.ShowDialog(this);
         }
+
+        private void btnEstados_Click(object sender, EventArgs e)
+        {
+            frmEstado frm = new frmEstado();
+            frm.ShowDialog(this);
+        }
     }
 }

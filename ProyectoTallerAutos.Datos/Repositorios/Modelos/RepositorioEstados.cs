@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace ProyectoTallerAutos.Datos.Repositorios.Modelos
 {
-    public class RepositorioTipoVehiculos : IRepositorioTipoVehiculos
+    public class RepositorioEstados : IRepositorioEstados
     {
         private readonly SqlConnection _sqlConnection;
-        public RepositorioTipoVehiculos(SqlConnection sqlConnection)
+        public RepositorioEstados(SqlConnection sqlConnection)
         {
             _sqlConnection = sqlConnection;
         }
@@ -21,29 +21,33 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Modelos
             throw new NotImplementedException();
         }
 
-        public bool EstaRelacionado(TipoVehiculo tipo)
+        public bool EstaRelacionado(Estado estado)
         {
             throw new NotImplementedException();
         }
 
-        public bool Existe(TipoVehiculo tipo)
+        public bool Existe(Estado estado)
         {
             throw new NotImplementedException();
         }
 
-        public List<TipoVehiculo> GetLista()
+        public Estado GetEstadoPorId(int id)
         {
-            List<TipoVehiculo> lista = new List<TipoVehiculo>();
+            throw new NotImplementedException();
+        }
+
+        public List<Estado> GetLista()
+        {
+            List<Estado> lista = new List<Estado>();
             try
             {
-
-                string cadenaComando = "select TipoDeVehiculoId, Descripcion from TiposDeVehiculos";
+                string cadenaComando = "select EstadoId, Descripcion from Estados";
                 SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    TipoVehiculo tipo = ConstruirTipoVehiculo(reader);
-                    lista.Add(tipo);
+                    Estado estado = ConstruirEstado(reader);
+                    lista.Add(estado);
                 }
                 reader.Close();
                 return lista;
@@ -55,22 +59,17 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Modelos
             }
         }
 
-        private TipoVehiculo ConstruirTipoVehiculo(SqlDataReader reader)
+        private Estado ConstruirEstado(SqlDataReader reader)
         {
-            return new TipoVehiculo
+            return new Estado
             {
-                TipoVehiculoId = reader.GetInt32(0),
+                EstadoId = reader.GetInt32(0),
                 Descripcion = reader.GetString(1),
 
             };
         }
 
-        public TipoVehiculo GetTipoPorId(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Guardar(TipoVehiculo tipo)
+        public void Guardar(Estado estado)
         {
             throw new NotImplementedException();
         }

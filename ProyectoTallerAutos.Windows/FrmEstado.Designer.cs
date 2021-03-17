@@ -1,6 +1,6 @@
-﻿namespace ProyectoTallerAutos.Windows.Modelos
+﻿namespace ProyectoTallerAutos.Windows
 {
-    partial class frmModelos
+    partial class frmEstado
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvModelos = new System.Windows.Forms.DataGridView();
-            this.cmnMarcas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEstados = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeDocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provinciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -44,63 +42,38 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.cmnEstados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvModelos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgvModelos);
+            this.panel1.Controls.Add(this.dgvEstados);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 88);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 619);
+            this.panel1.Size = new System.Drawing.Size(612, 434);
             this.panel1.TabIndex = 0;
             // 
-            // dgvModelos
+            // dgvEstados
             // 
-            this.dgvModelos.AllowUserToAddRows = false;
-            this.dgvModelos.AllowUserToDeleteRows = false;
-            this.dgvModelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModelos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cmnMarcas,
-            this.cmnTipoVehiculo,
-            this.cmnModelo});
-            this.dgvModelos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvModelos.Location = new System.Drawing.Point(0, 0);
-            this.dgvModelos.Name = "dgvModelos";
-            this.dgvModelos.ReadOnly = true;
-            this.dgvModelos.RowHeadersVisible = false;
-            this.dgvModelos.RowHeadersWidth = 51;
-            this.dgvModelos.RowTemplate.Height = 24;
-            this.dgvModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvModelos.Size = new System.Drawing.Size(865, 619);
-            this.dgvModelos.TabIndex = 0;
-            // 
-            // cmnMarcas
-            // 
-            this.cmnMarcas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnMarcas.HeaderText = "Marcas";
-            this.cmnMarcas.MinimumWidth = 6;
-            this.cmnMarcas.Name = "cmnMarcas";
-            this.cmnMarcas.ReadOnly = true;
-            // 
-            // cmnTipoVehiculo
-            // 
-            this.cmnTipoVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnTipoVehiculo.HeaderText = "Tipo de Vehiculo";
-            this.cmnTipoVehiculo.MinimumWidth = 6;
-            this.cmnTipoVehiculo.Name = "cmnTipoVehiculo";
-            this.cmnTipoVehiculo.ReadOnly = true;
-            // 
-            // cmnModelo
-            // 
-            this.cmnModelo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnModelo.HeaderText = "Modelo";
-            this.cmnModelo.MinimumWidth = 6;
-            this.cmnModelo.Name = "cmnModelo";
-            this.cmnModelo.ReadOnly = true;
+            this.dgvEstados.AllowUserToAddRows = false;
+            this.dgvEstados.AllowUserToDeleteRows = false;
+            this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cmnEstados});
+            this.dgvEstados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEstados.Location = new System.Drawing.Point(0, 0);
+            this.dgvEstados.Name = "dgvEstados";
+            this.dgvEstados.ReadOnly = true;
+            this.dgvEstados.RowHeadersVisible = false;
+            this.dgvEstados.RowHeadersWidth = 51;
+            this.dgvEstados.RowTemplate.Height = 24;
+            this.dgvEstados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEstados.Size = new System.Drawing.Size(612, 434);
+            this.dgvEstados.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -109,37 +82,41 @@
             this.archivosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(865, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(612, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // archivosToolStripMenuItem
             // 
             this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.marcasToolStripMenuItem,
-            this.tipoDeVehiculosToolStripMenuItem});
+            this.tiposDeDocToolStripMenuItem,
+            this.localidadesToolStripMenuItem,
+            this.provinciasToolStripMenuItem});
             this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
             this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.archivosToolStripMenuItem.Text = "Archivos";
             // 
-            // marcasToolStripMenuItem
+            // tiposDeDocToolStripMenuItem
             // 
-            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.marcasToolStripMenuItem.Text = "Marcas";
-            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
+            this.tiposDeDocToolStripMenuItem.Name = "tiposDeDocToolStripMenuItem";
+            this.tiposDeDocToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             // 
-            // tipoDeVehiculosToolStripMenuItem
+            // localidadesToolStripMenuItem
             // 
-            this.tipoDeVehiculosToolStripMenuItem.Name = "tipoDeVehiculosToolStripMenuItem";
-            this.tipoDeVehiculosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tipoDeVehiculosToolStripMenuItem.Text = "Tipo de Vehiculos";
-            this.tipoDeVehiculosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeVehiculosToolStripMenuItem_Click);
+            this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.localidadesToolStripMenuItem.Text = "Localidades";
+            // 
+            // provinciasToolStripMenuItem
+            // 
+            this.provinciasToolStripMenuItem.Name = "provinciasToolStripMenuItem";
+            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.provinciasToolStripMenuItem.Text = "Provincias";
             // 
             // btnEliminar
             // 
             this.btnEliminar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.delete_bin_18px;
-            this.btnEliminar.Location = new System.Drawing.Point(570, 20);
+            this.btnEliminar.Location = new System.Drawing.Point(315, 20);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(47, 37);
             this.btnEliminar.TabIndex = 2;
@@ -148,7 +125,7 @@
             // btnEditar
             // 
             this.btnEditar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.edit_18px;
-            this.btnEditar.Location = new System.Drawing.Point(623, 20);
+            this.btnEditar.Location = new System.Drawing.Point(368, 20);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(47, 37);
             this.btnEditar.TabIndex = 2;
@@ -157,7 +134,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.search_18px;
-            this.btnBuscar.Location = new System.Drawing.Point(676, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(421, 20);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(47, 37);
             this.btnBuscar.TabIndex = 2;
@@ -166,7 +143,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.update_left_rotation_18px;
-            this.btnActualizar.Location = new System.Drawing.Point(729, 20);
+            this.btnActualizar.Location = new System.Drawing.Point(474, 20);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(47, 37);
             this.btnActualizar.TabIndex = 2;
@@ -175,7 +152,7 @@
             // btnImprimir
             // 
             this.btnImprimir.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.print_18px;
-            this.btnImprimir.Location = new System.Drawing.Point(782, 20);
+            this.btnImprimir.Location = new System.Drawing.Point(527, 20);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(47, 37);
             this.btnImprimir.TabIndex = 2;
@@ -184,7 +161,7 @@
             // btnSalir
             // 
             this.btnSalir.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.delete_20px;
-            this.btnSalir.Location = new System.Drawing.Point(835, 20);
+            this.btnSalir.Location = new System.Drawing.Point(580, 20);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(47, 37);
             this.btnSalir.TabIndex = 2;
@@ -194,17 +171,25 @@
             // btnNuevo
             // 
             this.btnNuevo.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.plus_25px;
-            this.btnNuevo.Location = new System.Drawing.Point(517, 20);
+            this.btnNuevo.Location = new System.Drawing.Point(262, 20);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(47, 37);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.UseVisualStyleBackColor = false;
             // 
-            // frmModelos
+            // cmnEstados
+            // 
+            this.cmnEstados.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnEstados.HeaderText = "Estados";
+            this.cmnEstados.MinimumWidth = 6;
+            this.cmnEstados.Name = "cmnEstados";
+            this.cmnEstados.ReadOnly = true;
+            // 
+            // frmEstado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 727);
+            this.ClientSize = new System.Drawing.Size(652, 542);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnImprimir);
@@ -216,12 +201,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmModelos";
+            this.Name = "frmEstado";
             this.Style = MetroFramework.MetroColorStyle.Orange;
-            this.Text = "Modelos";
-            this.Load += new System.EventHandler(this.frmModelos_Load);
+            this.Text = "Estados";
+            this.Load += new System.EventHandler(this.FrmEstado_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvModelos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -233,7 +218,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.DataGridView dgvModelos;
+        private System.Windows.Forms.DataGridView dgvEstados;
         private System.Windows.Forms.ToolStripMenuItem archivosToolStripMenuItem;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEliminar;
@@ -242,10 +227,9 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipoDeVehiculosToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnMarcas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnTipoVehiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnModelo;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeDocToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem provinciasToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnEstados;
     }
 }
