@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0F04814-634D-45A0-8B4C-0275A0F99314}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoTallerAutos.Servicios</RootNamespace>
+    <AssemblyName>ProyectoTallerAutos.Servicios</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\Clientes\Interfaces\IServicioClientes.cs" />
+    <Compile Include="Servicios\Clientes\Interfaces\IServicioLocalidades.cs" />
+    <Compile Include="Servicios\Clientes\Interfaces\IServicioProvincias.cs" />
+    <Compile Include="Servicios\Clientes\Interfaces\IServicioTipoDoc.cs" />
+    <Compile Include="Servicios\Clientes\ServicioClientes.cs" />
+    <Compile Include="Servicios\Clientes\ServicioLocalidades.cs" />
+    <Compile Include="Servicios\Clientes\ServicioProvincias.cs" />
+    <Compile Include="Servicios\Clientes\ServicioTipoDoc.cs" />
+    <Compile Include="Servicios\Modelos\Interfaces\IServicioMarcas.cs" />
+    <Compile Include="Servicios\Modelos\Interfaces\IServicioModelos.cs" />
+    <Compile Include="Servicios\Modelos\Interfaces\IServicioTipoVehiculos.cs" />
+    <Compile Include="Servicios\Modelos\ServicioMarcas.cs" />
+    <Compile Include="Servicios\Modelos\ServicioModelos.cs" />
+    <Compile Include="Servicios\Modelos\ServicioTipoVehiculos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProyectoTallerAutos.Datos\ProyectoTallerAutos.Datos.csproj">
+      <Project>{23e17200-24ad-4a68-a237-7e7efd0a4277}</Project>
+      <Name>ProyectoTallerAutos.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProyectoTallerAutos.Entidades\ProyectoTallerAutos.Entities.csproj">
+      <Project>{332bcc73-2df9-430f-8448-2416dd111948}</Project>
+      <Name>ProyectoTallerAutos.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
