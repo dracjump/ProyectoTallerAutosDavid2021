@@ -18,17 +18,44 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Clientes
 
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioProvincias(_conexionBd.AbrirConexion());
+                _repositorio.Borrar(id);
+                _conexionBd.CerrarConexion();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool EstaRelacionado(Provincia provincia)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioProvincias(_conexionBd.AbrirConexion());
+                var estaRelacionado = _repositorio.EstaRelacionado(provincia);
+                _conexionBd.CerrarConexion();
+                return estaRelacionado;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Provincia provincia)
         {
-            throw new NotImplementedException();
+            _conexionBd = new ConexionBd();
+            _repositorio = new RepositorioProvincias(_conexionBd.AbrirConexion());
+            var existe = _repositorio.Existe(provincia);
+            _conexionBd.CerrarConexion();
+            return existe;
         }
 
         public List<Provincia> GetLista()
@@ -55,7 +82,19 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Clientes
 
         public void Guardar(Provincia provincia)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioProvincias(_conexionBd.AbrirConexion());
+                _repositorio.Guardar(provincia);
+                _conexionBd.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

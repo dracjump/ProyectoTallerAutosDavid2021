@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLocalidades = new System.Windows.Forms.DataGridView();
             this.cmnLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnProvincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -40,36 +40,38 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalidades)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvLocalidades);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(758, 445);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvLocalidades
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvLocalidades.AllowUserToAddRows = false;
+            this.dgvLocalidades.AllowUserToDeleteRows = false;
+            this.dgvLocalidades.AllowUserToResizeColumns = false;
+            this.dgvLocalidades.AllowUserToResizeRows = false;
+            this.dgvLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnLocalidad,
             this.cmnProvincia});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(758, 445);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvLocalidades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLocalidades.Location = new System.Drawing.Point(0, 0);
+            this.dgvLocalidades.Name = "dgvLocalidades";
+            this.dgvLocalidades.ReadOnly = true;
+            this.dgvLocalidades.RowHeadersVisible = false;
+            this.dgvLocalidades.RowHeadersWidth = 51;
+            this.dgvLocalidades.RowTemplate.Height = 24;
+            this.dgvLocalidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLocalidades.Size = new System.Drawing.Size(758, 445);
+            this.dgvLocalidades.TabIndex = 0;
             // 
             // cmnLocalidad
             // 
@@ -132,6 +134,7 @@
             this.btnEditar.Size = new System.Drawing.Size(47, 37);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -141,6 +144,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(47, 37);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -150,6 +154,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(47, 37);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmLocalidades
             // 
@@ -168,8 +173,9 @@
             this.Name = "frmLocalidades";
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Localidades";
+            this.Load += new System.EventHandler(this.frmLocalidades_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalidades)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,7 +183,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLocalidades;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;

@@ -118,43 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Estados" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Estados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="search_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="update_left_rotation_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\update_left_rotation_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_bin_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_bin_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="print_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\print_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save_archive_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_archive_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tesla_model_x_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tesla_model_x_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_bin_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_bin_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_client_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_client_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="plus_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tesla_model_x_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tesla_model_x_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_archive_36px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_archive_36px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ok_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ok_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Estados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Estados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="update_left_rotation_18px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\update_left_rotation_18px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,4 +1,8 @@
-﻿using ProyectoTallerAutos.Entidades.Entidades;
+﻿using ProyectoTallerAutos.Datos;
+using ProyectoTallerAutos.Datos.Repositorios.Clientes;
+using ProyectoTallerAutos.Datos.Repositorios.Clientes.Interfaces;
+using ProyectoTallerAutos.Entidades.DTOs.Localidad;
+using ProyectoTallerAutos.Entidades.Entidades;
 using ProyectoTallerAutos.Servicios.Servicios.Clientes.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,34 +14,115 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Clientes
 {
     public class ServicioLocalidades : IServicioLocalidades
     {
-        public void Borrar(Localidad localidad)
+        private  IRepositorioLocalidades _repositorio;
+        private IRepositorioProvincias _repositorioProvincias;
+        private  ConexionBd _conexionBd;
+        public ServicioLocalidades()
         {
-            throw new NotImplementedException();
+
         }
+
+        public void Borrar(int id)
+        {
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioLocalidades(_conexionBd.AbrirConexion());
+                _repositorio.Borrar(id);
+                _conexionBd.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+        }
+
 
         public bool EstaRelacionado(Localidad localidad)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioLocalidades(_conexionBd.AbrirConexion());
+                var estaRelacionado = _repositorio.EstaRelacionado(localidad);
+                _conexionBd.CerrarConexion();
+                return estaRelacionado;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Localidad localidad)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioLocalidades(_conexionBd.AbrirConexion());
+                var existe = _repositorio.Existe(localidad);
+                _conexionBd.CerrarConexion();
+                return existe;
+            }
+            catch (Exception e)
+            {
+
+                throw; throw new Exception(e.Message);
+            }
         }
 
-        public List<Localidad> GetLista()
+        public List<LocalidadDto> GetLista()
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioLocalidades(_conexionBd.AbrirConexion());
+                var lista = _repositorio.GetLista();
+                return lista;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public Localidad GetLocalidadesPorId(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorioProvincias = new RepositorioProvincias(_conexionBd.AbrirConexion());
+                _repositorio = new RepositorioLocalidades(_conexionBd.AbrirConexion(),_repositorioProvincias);
+                var localidad = _repositorio.GetLocalidadesPorId(id);
+                _conexionBd.CerrarConexion();
+                return localidad;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public void Guardar(Localidad localidad)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioLocalidades(_conexionBd.AbrirConexion());
+                _repositorio.Guardar(localidad);
+                _conexionBd.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

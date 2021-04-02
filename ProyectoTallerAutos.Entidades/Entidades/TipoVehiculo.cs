@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProyectoTallerAutos.Entidades.Entidades
 {
-    public class TipoVehiculo
+    public class TipoVehiculo : ICloneable
     {
         public int TipoVehiculoId { get; set; }
         public string Descripcion { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }

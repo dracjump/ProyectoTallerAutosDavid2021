@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
+            this.cmnMarcas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.cmnMarcas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
@@ -48,13 +48,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(575, 647);
+            this.panel1.Size = new System.Drawing.Size(575, 548);
             this.panel1.TabIndex = 0;
             // 
             // dgvMarcas
             // 
             this.dgvMarcas.AllowUserToAddRows = false;
             this.dgvMarcas.AllowUserToDeleteRows = false;
+            this.dgvMarcas.AllowUserToResizeColumns = false;
+            this.dgvMarcas.AllowUserToResizeRows = false;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnMarcas});
@@ -66,8 +68,16 @@
             this.dgvMarcas.RowHeadersWidth = 51;
             this.dgvMarcas.RowTemplate.Height = 24;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(575, 647);
+            this.dgvMarcas.Size = new System.Drawing.Size(575, 548);
             this.dgvMarcas.TabIndex = 0;
+            // 
+            // cmnMarcas
+            // 
+            this.cmnMarcas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnMarcas.HeaderText = "Marcas";
+            this.cmnMarcas.MinimumWidth = 6;
+            this.cmnMarcas.Name = "cmnMarcas";
+            this.cmnMarcas.ReadOnly = true;
             // 
             // btnEliminar
             // 
@@ -77,6 +87,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(47, 37);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -86,6 +97,7 @@
             this.btnEditar.Size = new System.Drawing.Size(47, 37);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBuscar
             // 
@@ -132,20 +144,13 @@
             this.btnNuevo.Size = new System.Drawing.Size(47, 37);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.UseVisualStyleBackColor = false;
-            // 
-            // cmnMarcas
-            // 
-            this.cmnMarcas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnMarcas.HeaderText = "Marcas";
-            this.cmnMarcas.MinimumWidth = 6;
-            this.cmnMarcas.Name = "cmnMarcas";
-            this.cmnMarcas.ReadOnly = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 727);
+            this.ClientSize = new System.Drawing.Size(615, 628);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnImprimir);

@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +39,8 @@
             this.cmnTelFino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnTelMovil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnCorreoEl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeDocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.provinciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +52,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,31 +65,12 @@
             this.panel1.Size = new System.Drawing.Size(1443, 619);
             this.panel1.TabIndex = 0;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1443, 28);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // archivosToolStripMenuItem
-            // 
-            this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tiposDeDocToolStripMenuItem,
-            this.localidadesToolStripMenuItem,
-            this.provinciasToolStripMenuItem});
-            this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
-            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
-            this.archivosToolStripMenuItem.Text = "Archivos";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnApellido,
@@ -103,6 +85,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -174,24 +164,45 @@
             this.cmnCorreoEl.ReadOnly = true;
             this.cmnCorreoEl.Width = 125;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1443, 28);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivosToolStripMenuItem
+            // 
+            this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDeDocToolStripMenuItem,
+            this.localidadesToolStripMenuItem,
+            this.provinciasToolStripMenuItem});
+            this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
+            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.archivosToolStripMenuItem.Text = "Archivos";
+            // 
             // tiposDeDocToolStripMenuItem
             // 
             this.tiposDeDocToolStripMenuItem.Name = "tiposDeDocToolStripMenuItem";
-            this.tiposDeDocToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiposDeDocToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.tiposDeDocToolStripMenuItem.Text = "TiposDeDoc";
             this.tiposDeDocToolStripMenuItem.Click += new System.EventHandler(this.tiposDeDocToolStripMenuItem_Click);
             // 
             // localidadesToolStripMenuItem
             // 
             this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
-            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.localidadesToolStripMenuItem.Text = "Localidades";
             this.localidadesToolStripMenuItem.Click += new System.EventHandler(this.localidadesToolStripMenuItem_Click);
             // 
             // provinciasToolStripMenuItem
             // 
             this.provinciasToolStripMenuItem.Name = "provinciasToolStripMenuItem";
-            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.provinciasToolStripMenuItem.Text = "Provincias";
             this.provinciasToolStripMenuItem.Click += new System.EventHandler(this.provinciasToolStripMenuItem_Click);
             // 
@@ -281,9 +292,9 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Clientes";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

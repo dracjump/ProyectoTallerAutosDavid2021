@@ -1,4 +1,4 @@
-﻿namespace ProyectoTallerAutos.Windows.Clientes
+﻿namespace ProyectoTallerAutos.Windows.FichasAutos
 {
     partial class FrmFichasAutos
     {
@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cmnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnNDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnTelFino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnTelMovil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnCorreoEl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFichasAutos = new System.Windows.Forms.DataGridView();
+            this.cmnNombreCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnApellidoCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnNumDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnPatente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiposDeDocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.provinciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -51,107 +54,100 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichasAutos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvFichasAutos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1443, 619);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvFichasAutos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cmnApellido,
-            this.cmnNombre,
-            this.cmnNDoc,
-            this.cmnDireccion,
-            this.cmnLocalidad,
-            this.cmnTelFino,
-            this.cmnTelMovil,
-            this.cmnCorreoEl});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1443, 619);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvFichasAutos.AllowUserToAddRows = false;
+            this.dgvFichasAutos.AllowUserToDeleteRows = false;
+            this.dgvFichasAutos.AllowUserToResizeColumns = false;
+            this.dgvFichasAutos.AllowUserToResizeRows = false;
+            this.dgvFichasAutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFichasAutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cmnNombreCli,
+            this.cmnApellidoCli,
+            this.cmnNumDoc,
+            this.cmnMarca,
+            this.cmnTipoVehiculo,
+            this.cmnModelo,
+            this.cmnPatente});
+            this.dgvFichasAutos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFichasAutos.Location = new System.Drawing.Point(0, 0);
+            this.dgvFichasAutos.Name = "dgvFichasAutos";
+            this.dgvFichasAutos.ReadOnly = true;
+            this.dgvFichasAutos.RowHeadersVisible = false;
+            this.dgvFichasAutos.RowHeadersWidth = 51;
+            this.dgvFichasAutos.RowTemplate.Height = 24;
+            this.dgvFichasAutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFichasAutos.Size = new System.Drawing.Size(1443, 619);
+            this.dgvFichasAutos.TabIndex = 0;
             // 
-            // cmnApellido
+            // cmnNombreCli
             // 
-            this.cmnApellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnApellido.HeaderText = "Apellido";
-            this.cmnApellido.MinimumWidth = 6;
-            this.cmnApellido.Name = "cmnApellido";
-            this.cmnApellido.ReadOnly = true;
+            this.cmnNombreCli.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnNombreCli.HeaderText = "Nombre Cliente";
+            this.cmnNombreCli.MinimumWidth = 6;
+            this.cmnNombreCli.Name = "cmnNombreCli";
+            this.cmnNombreCli.ReadOnly = true;
             // 
-            // cmnNombre
+            // cmnApellidoCli
             // 
-            this.cmnNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnNombre.HeaderText = "Nombre";
-            this.cmnNombre.MinimumWidth = 6;
-            this.cmnNombre.Name = "cmnNombre";
-            this.cmnNombre.ReadOnly = true;
+            this.cmnApellidoCli.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnApellidoCli.HeaderText = "Apellido";
+            this.cmnApellidoCli.MinimumWidth = 6;
+            this.cmnApellidoCli.Name = "cmnApellidoCli";
+            this.cmnApellidoCli.ReadOnly = true;
             // 
-            // cmnNDoc
+            // cmnNumDoc
             // 
-            this.cmnNDoc.HeaderText = "Nº Doc";
-            this.cmnNDoc.MinimumWidth = 6;
-            this.cmnNDoc.Name = "cmnNDoc";
-            this.cmnNDoc.ReadOnly = true;
-            this.cmnNDoc.Width = 125;
+            this.cmnNumDoc.HeaderText = "Nº Doc";
+            this.cmnNumDoc.MinimumWidth = 6;
+            this.cmnNumDoc.Name = "cmnNumDoc";
+            this.cmnNumDoc.ReadOnly = true;
+            this.cmnNumDoc.Width = 125;
             // 
-            // cmnDireccion
+            // cmnMarca
             // 
-            this.cmnDireccion.HeaderText = "Dirección";
-            this.cmnDireccion.MinimumWidth = 6;
-            this.cmnDireccion.Name = "cmnDireccion";
-            this.cmnDireccion.ReadOnly = true;
-            this.cmnDireccion.Width = 125;
+            this.cmnMarca.HeaderText = "Marca";
+            this.cmnMarca.MinimumWidth = 6;
+            this.cmnMarca.Name = "cmnMarca";
+            this.cmnMarca.ReadOnly = true;
+            this.cmnMarca.Width = 125;
             // 
-            // cmnLocalidad
+            // cmnTipoVehiculo
             // 
-            this.cmnLocalidad.HeaderText = "Localidad";
-            this.cmnLocalidad.MinimumWidth = 6;
-            this.cmnLocalidad.Name = "cmnLocalidad";
-            this.cmnLocalidad.ReadOnly = true;
-            this.cmnLocalidad.Width = 125;
+            this.cmnTipoVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnTipoVehiculo.HeaderText = "Tipo Vehiculo";
+            this.cmnTipoVehiculo.MinimumWidth = 6;
+            this.cmnTipoVehiculo.Name = "cmnTipoVehiculo";
+            this.cmnTipoVehiculo.ReadOnly = true;
             // 
-            // cmnTelFino
+            // cmnModelo
             // 
-            this.cmnTelFino.HeaderText = "Tel.Fijo";
-            this.cmnTelFino.MinimumWidth = 6;
-            this.cmnTelFino.Name = "cmnTelFino";
-            this.cmnTelFino.ReadOnly = true;
-            this.cmnTelFino.Width = 125;
+            this.cmnModelo.HeaderText = "Modelo";
+            this.cmnModelo.MinimumWidth = 6;
+            this.cmnModelo.Name = "cmnModelo";
+            this.cmnModelo.ReadOnly = true;
+            this.cmnModelo.Width = 125;
             // 
-            // cmnTelMovil
+            // cmnPatente
             // 
-            this.cmnTelMovil.HeaderText = "Tel.Movil";
-            this.cmnTelMovil.MinimumWidth = 6;
-            this.cmnTelMovil.Name = "cmnTelMovil";
-            this.cmnTelMovil.ReadOnly = true;
-            this.cmnTelMovil.Width = 125;
-            // 
-            // cmnCorreoEl
-            // 
-            this.cmnCorreoEl.HeaderText = "Correo Electronico";
-            this.cmnCorreoEl.MinimumWidth = 6;
-            this.cmnCorreoEl.Name = "cmnCorreoEl";
-            this.cmnCorreoEl.ReadOnly = true;
-            this.cmnCorreoEl.Width = 125;
+            this.cmnPatente.HeaderText = "Patente";
+            this.cmnPatente.MinimumWidth = 6;
+            this.cmnPatente.Name = "cmnPatente";
+            this.cmnPatente.ReadOnly = true;
+            this.cmnPatente.Width = 125;
             // 
             // menuStrip1
             // 
@@ -167,31 +163,60 @@
             // archivosToolStripMenuItem
             // 
             this.archivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tiposDeDocToolStripMenuItem,
             this.localidadesToolStripMenuItem,
             this.provinciasToolStripMenuItem});
             this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
             this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.archivosToolStripMenuItem.Text = "Archivos";
             // 
-            // tiposDeDocToolStripMenuItem
-            // 
-            this.tiposDeDocToolStripMenuItem.Name = "tiposDeDocToolStripMenuItem";
-            this.tiposDeDocToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tiposDeDocToolStripMenuItem.Text = "TiposDeDoc";
-            this.tiposDeDocToolStripMenuItem.Click += new System.EventHandler(this.tiposDeDocToolStripMenuItem_Click);
-            // 
             // localidadesToolStripMenuItem
             // 
+            this.localidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.localidadToolStripMenuItem,
+            this.provinciaToolStripMenuItem,
+            this.tipoDocumentoToolStripMenuItem});
             this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
-            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.localidadesToolStripMenuItem.Text = "Localidades";
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.localidadesToolStripMenuItem.Text = "Clientes";
+            // 
+            // localidadToolStripMenuItem
+            // 
+            this.localidadToolStripMenuItem.Name = "localidadToolStripMenuItem";
+            this.localidadToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.localidadToolStripMenuItem.Text = "Localidad";
+            // 
+            // provinciaToolStripMenuItem
+            // 
+            this.provinciaToolStripMenuItem.Name = "provinciaToolStripMenuItem";
+            this.provinciaToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.provinciaToolStripMenuItem.Text = "Provincia";
+            // 
+            // tipoDocumentoToolStripMenuItem
+            // 
+            this.tipoDocumentoToolStripMenuItem.Name = "tipoDocumentoToolStripMenuItem";
+            this.tipoDocumentoToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.tipoDocumentoToolStripMenuItem.Text = "Tipo documento";
             // 
             // provinciasToolStripMenuItem
             // 
+            this.provinciasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.marcasToolStripMenuItem,
+            this.tipoVehiculoToolStripMenuItem});
             this.provinciasToolStripMenuItem.Name = "provinciasToolStripMenuItem";
-            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.provinciasToolStripMenuItem.Text = "Provincias";
+            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.provinciasToolStripMenuItem.Text = "Modelos";
+            // 
+            // marcasToolStripMenuItem
+            // 
+            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.marcasToolStripMenuItem.Text = "Marcas";
+            // 
+            // tipoVehiculoToolStripMenuItem
+            // 
+            this.tipoVehiculoToolStripMenuItem.Name = "tipoVehiculoToolStripMenuItem";
+            this.tipoVehiculoToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.tipoVehiculoToolStripMenuItem.Text = "Tipo Vehiculo";
             // 
             // btnEliminar
             // 
@@ -277,9 +302,10 @@
             this.MinimumSize = new System.Drawing.Size(1483, 727);
             this.Name = "FrmFichasAutos";
             this.Style = MetroFramework.MetroColorStyle.Orange;
-            this.Text = "Clientes";
+            this.Text = "Fichas de Autos";
+            this.Load += new System.EventHandler(this.FrmFichasAutos_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichasAutos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -291,15 +317,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnNDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnDireccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnLocalidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnTelFino;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnTelMovil;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnCorreoEl;
+        private System.Windows.Forms.DataGridView dgvFichasAutos;
         private System.Windows.Forms.ToolStripMenuItem archivosToolStripMenuItem;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEliminar;
@@ -308,8 +326,19 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ToolStripMenuItem tiposDeDocToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem provinciasToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnNombreCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnApellidoCli;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnNumDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnTipoVehiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnPatente;
+        private System.Windows.Forms.ToolStripMenuItem localidadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem provinciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoVehiculoToolStripMenuItem;
     }
 }

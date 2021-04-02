@@ -30,20 +30,20 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvModelos = new System.Windows.Forms.DataGridView();
-            this.cmnMarcas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.cmnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnMarcas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModelos)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -62,11 +62,13 @@
             // 
             this.dgvModelos.AllowUserToAddRows = false;
             this.dgvModelos.AllowUserToDeleteRows = false;
+            this.dgvModelos.AllowUserToResizeColumns = false;
+            this.dgvModelos.AllowUserToResizeRows = false;
             this.dgvModelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModelos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cmnModelo,
             this.cmnMarcas,
-            this.cmnTipoVehiculo,
-            this.cmnModelo});
+            this.cmnTipoVehiculo});
             this.dgvModelos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvModelos.Location = new System.Drawing.Point(0, 0);
             this.dgvModelos.Name = "dgvModelos";
@@ -77,30 +79,6 @@
             this.dgvModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvModelos.Size = new System.Drawing.Size(865, 619);
             this.dgvModelos.TabIndex = 0;
-            // 
-            // cmnMarcas
-            // 
-            this.cmnMarcas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnMarcas.HeaderText = "Marcas";
-            this.cmnMarcas.MinimumWidth = 6;
-            this.cmnMarcas.Name = "cmnMarcas";
-            this.cmnMarcas.ReadOnly = true;
-            // 
-            // cmnTipoVehiculo
-            // 
-            this.cmnTipoVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnTipoVehiculo.HeaderText = "Tipo de Vehiculo";
-            this.cmnTipoVehiculo.MinimumWidth = 6;
-            this.cmnTipoVehiculo.Name = "cmnTipoVehiculo";
-            this.cmnTipoVehiculo.ReadOnly = true;
-            // 
-            // cmnModelo
-            // 
-            this.cmnModelo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnModelo.HeaderText = "Modelo";
-            this.cmnModelo.MinimumWidth = 6;
-            this.cmnModelo.Name = "cmnModelo";
-            this.cmnModelo.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -125,61 +103,16 @@
             // marcasToolStripMenuItem
             // 
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // tipoDeVehiculosToolStripMenuItem
             // 
             this.tipoDeVehiculosToolStripMenuItem.Name = "tipoDeVehiculosToolStripMenuItem";
-            this.tipoDeVehiculosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tipoDeVehiculosToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.tipoDeVehiculosToolStripMenuItem.Text = "Tipo de Vehiculos";
             this.tipoDeVehiculosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeVehiculosToolStripMenuItem_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.delete_bin_18px;
-            this.btnEliminar.Location = new System.Drawing.Point(570, 20);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(47, 37);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.edit_18px;
-            this.btnEditar.Location = new System.Drawing.Point(623, 20);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(47, 37);
-            this.btnEditar.TabIndex = 2;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.search_18px;
-            this.btnBuscar.Location = new System.Drawing.Point(676, 20);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(47, 37);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.update_left_rotation_18px;
-            this.btnActualizar.Location = new System.Drawing.Point(729, 20);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(47, 37);
-            this.btnActualizar.TabIndex = 2;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.print_18px;
-            this.btnImprimir.Location = new System.Drawing.Point(782, 20);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(47, 37);
-            this.btnImprimir.TabIndex = 2;
-            this.btnImprimir.UseVisualStyleBackColor = false;
             // 
             // btnSalir
             // 
@@ -191,6 +124,51 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.print_18px;
+            this.btnImprimir.Location = new System.Drawing.Point(782, 20);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(47, 37);
+            this.btnImprimir.TabIndex = 2;
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.update_left_rotation_18px;
+            this.btnActualizar.Location = new System.Drawing.Point(729, 20);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(47, 37);
+            this.btnActualizar.TabIndex = 2;
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.search_18px;
+            this.btnBuscar.Location = new System.Drawing.Point(676, 20);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(47, 37);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.edit_18px;
+            this.btnEditar.Location = new System.Drawing.Point(623, 20);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(47, 37);
+            this.btnEditar.TabIndex = 2;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.delete_bin_18px;
+            this.btnEliminar.Location = new System.Drawing.Point(570, 20);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(47, 37);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
             // btnNuevo
             // 
             this.btnNuevo.Image = global::ProyectoTallerAutos.Windows.Properties.Resources.plus_25px;
@@ -199,6 +177,31 @@
             this.btnNuevo.Size = new System.Drawing.Size(47, 37);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // cmnModelo
+            // 
+            this.cmnModelo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnModelo.HeaderText = "Modelo";
+            this.cmnModelo.MinimumWidth = 6;
+            this.cmnModelo.Name = "cmnModelo";
+            this.cmnModelo.ReadOnly = true;
+            // 
+            // cmnMarcas
+            // 
+            this.cmnMarcas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnMarcas.HeaderText = "Marca";
+            this.cmnMarcas.MinimumWidth = 6;
+            this.cmnMarcas.Name = "cmnMarcas";
+            this.cmnMarcas.ReadOnly = true;
+            // 
+            // cmnTipoVehiculo
+            // 
+            this.cmnTipoVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnTipoVehiculo.HeaderText = "Tipo de Vehiculo";
+            this.cmnTipoVehiculo.MinimumWidth = 6;
+            this.cmnTipoVehiculo.Name = "cmnTipoVehiculo";
+            this.cmnTipoVehiculo.ReadOnly = true;
             // 
             // frmModelos
             // 
@@ -244,8 +247,8 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeVehiculosToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmnModelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnMarcas;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnTipoVehiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmnModelo;
     }
 }

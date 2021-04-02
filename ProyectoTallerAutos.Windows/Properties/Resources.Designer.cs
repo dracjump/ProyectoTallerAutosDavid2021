@@ -73,6 +73,16 @@ namespace ProyectoTallerAutos.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_50px {
+            get {
+                object obj = ResourceManager.GetObject("cancel_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_20px {
             get {
                 object obj = ResourceManager.GetObject("delete_20px", resourceCulture);
@@ -116,6 +126,16 @@ namespace ProyectoTallerAutos.Windows.Properties {
         internal static System.Drawing.Bitmap Exit {
             get {
                 object obj = ResourceManager.GetObject("Exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok_50px {
+            get {
+                object obj = ResourceManager.GetObject("ok_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

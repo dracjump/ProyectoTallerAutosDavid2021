@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvTipoDoc = new System.Windows.Forms.DataGridView();
+            this.cmnTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.cmnTipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDoc)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,8 @@
             // 
             this.dgvTipoDoc.AllowUserToAddRows = false;
             this.dgvTipoDoc.AllowUserToDeleteRows = false;
+            this.dgvTipoDoc.AllowUserToResizeColumns = false;
+            this.dgvTipoDoc.AllowUserToResizeRows = false;
             this.dgvTipoDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoDoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnTipoDoc});
@@ -67,6 +69,14 @@
             this.dgvTipoDoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTipoDoc.Size = new System.Drawing.Size(366, 422);
             this.dgvTipoDoc.TabIndex = 0;
+            // 
+            // cmnTipoDoc
+            // 
+            this.cmnTipoDoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnTipoDoc.HeaderText = "Tipo de Documento";
+            this.cmnTipoDoc.MinimumWidth = 6;
+            this.cmnTipoDoc.Name = "cmnTipoDoc";
+            this.cmnTipoDoc.ReadOnly = true;
             // 
             // btnSalir
             // 
@@ -113,6 +123,7 @@
             this.btnEditar.Size = new System.Drawing.Size(47, 37);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -122,6 +133,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(47, 37);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -131,14 +143,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(47, 37);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.UseVisualStyleBackColor = false;
-            // 
-            // cmnTipoDoc
-            // 
-            this.cmnTipoDoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnTipoDoc.HeaderText = "Tipo de Documento";
-            this.cmnTipoDoc.MinimumWidth = 6;
-            this.cmnTipoDoc.Name = "cmnTipoDoc";
-            this.cmnTipoDoc.ReadOnly = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmTipoDoc
             // 

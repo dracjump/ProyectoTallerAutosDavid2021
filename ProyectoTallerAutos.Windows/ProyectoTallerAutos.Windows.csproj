@@ -55,6 +55,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes\FormAE\FrmClientesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormAE\FrmClientesAE.Designer.cs">
+      <DependentUpon>FrmClientesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormAE\FrmLocalidadesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormAE\FrmLocalidadesAE.Designer.cs">
+      <DependentUpon>FrmLocalidadesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormAE\FrmProvinciasAE .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormAE\FrmProvinciasAE .Designer.cs">
+      <DependentUpon>FrmProvinciasAE .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormAE\FrmTiposDocAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormAE\FrmTiposDocAE.Designer.cs">
+      <DependentUpon>FrmTiposDocAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes\FrmTipoDoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +103,12 @@
     <Compile Include="Clientes\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FichasAutos\FormAE\FrmFichaAutoAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FichasAutos\FormAE\FrmFichaAutoAE.Designer.cs">
+      <DependentUpon>FrmFichaAutoAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FichasAutos\FrmFichasAutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +121,35 @@
     <Compile Include="FrmEstado.Designer.cs">
       <DependentUpon>FrmEstado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEstadosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadosAE.Designer.cs">
+      <DependentUpon>FrmEstadosAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal01.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenuPrincipal01.Designer.cs">
       <DependentUpon>frmMenuPrincipal01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\FormAE\FrmModelosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\FormAE\FrmModelosAE.Designer.cs">
+      <DependentUpon>FrmModelosAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\FormAE\FrmTiposAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\FormAE\FrmTiposAE.Designer.cs">
+      <DependentUpon>FrmTiposAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\FormAE\FrmMarcasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\FormAE\FrmMarcasAE.Designer.cs">
+      <DependentUpon>FrmMarcasAE.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelos\FrmTipoVehiculo.cs">
       <SubType>Form</SubType>
@@ -117,6 +171,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clientes\FormAE\FrmClientesAE.resx">
+      <DependentUpon>FrmClientesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\FormAE\FrmLocalidadesAE.resx">
+      <DependentUpon>FrmLocalidadesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\FormAE\FrmProvinciasAE .resx">
+      <DependentUpon>FrmProvinciasAE .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\FormAE\FrmTiposDocAE.resx">
+      <DependentUpon>FrmTiposDocAE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes\FrmTipoDoc.resx">
       <DependentUpon>FrmTipoDoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,14 +195,29 @@
     <EmbeddedResource Include="Clientes\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FichasAutos\FormAE\FrmFichaAutoAE.resx">
+      <DependentUpon>FrmFichaAutoAE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FichasAutos\FrmFichasAutos.resx">
       <DependentUpon>FrmFichasAutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstado.resx">
       <DependentUpon>FrmEstado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadosAE.resx">
+      <DependentUpon>FrmEstadosAE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal01.resx">
       <DependentUpon>frmMenuPrincipal01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\FormAE\FrmModelosAE.resx">
+      <DependentUpon>FrmModelosAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\FormAE\FrmTiposAE.resx">
+      <DependentUpon>FrmTiposAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\FormAE\FrmMarcasAE.resx">
+      <DependentUpon>FrmMarcasAE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modelos\FrmTipoVehiculo.resx">
       <DependentUpon>FrmTipoVehiculo.cs</DependentUpon>
@@ -196,11 +277,7 @@
   <ItemGroup>
     <None Include="Resources\search_client_36px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clientes\FormAE\" />
-    <Folder Include="FichasAutos\FormAE\" />
-    <Folder Include="Modelos\FormAE\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\add_18px.png" />
   </ItemGroup>
@@ -224,6 +301,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

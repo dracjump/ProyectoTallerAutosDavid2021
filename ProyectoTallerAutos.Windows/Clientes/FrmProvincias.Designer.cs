@@ -55,6 +55,8 @@
             // 
             this.dgvProvincias.AllowUserToAddRows = false;
             this.dgvProvincias.AllowUserToDeleteRows = false;
+            this.dgvProvincias.AllowUserToResizeColumns = false;
+            this.dgvProvincias.AllowUserToResizeRows = false;
             this.dgvProvincias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProvincias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnProvincia});
@@ -122,6 +124,7 @@
             this.btnEditar.Size = new System.Drawing.Size(47, 37);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -131,6 +134,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(47, 37);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuevo
             // 
@@ -140,6 +144,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(47, 37);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmProvincias
             // 

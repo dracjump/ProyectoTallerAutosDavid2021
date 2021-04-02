@@ -18,17 +18,44 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Clientes
 
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioTipoDoc(_conexionBd.AbrirConexion());
+                _repositorio.Borrar(id);
+                _conexionBd.CerrarConexion();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool EstaRelacionado(TipoDocumento tipoDocumento)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioTipoDoc(_conexionBd.AbrirConexion());
+                var estaRelacionado = _repositorio.EstaRelacionado(tipoDocumento);
+                _conexionBd.CerrarConexion();
+                return estaRelacionado;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(TipoDocumento tipoDocumento)
         {
-            throw new NotImplementedException();
+            _conexionBd = new ConexionBd();
+            _repositorio = new RepositorioTipoDoc(_conexionBd.AbrirConexion());
+            var existe = _repositorio.Existe(tipoDocumento);
+            _conexionBd.CerrarConexion();
+            return existe;
         }
 
         public List<TipoDocumento> GetLista()
@@ -54,7 +81,19 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Clientes
 
         public void Guardar(TipoDocumento tipoDocumento)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioTipoDoc(_conexionBd.AbrirConexion());
+                _repositorio.Guardar(tipoDocumento);
+                _conexionBd.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

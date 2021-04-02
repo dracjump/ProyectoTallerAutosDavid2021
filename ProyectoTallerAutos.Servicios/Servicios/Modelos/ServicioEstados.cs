@@ -17,17 +17,52 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Modelos
         private ConexionBd _conexionBd;
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioEstados(_conexionBd.AbrirConexion());
+                _repositorio.Borrar(id);
+                _conexionBd.CerrarConexion();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool EstaRelacionado(Estado estado)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioEstados(_conexionBd.AbrirConexion());
+                var estaRelacionado = _repositorio.EstaRelacionado(estado);
+                _conexionBd.CerrarConexion();
+                return estaRelacionado;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Estado estado)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioEstados(_conexionBd.AbrirConexion());
+                var existe = _repositorio.Existe(estado);
+                _conexionBd.CerrarConexion();
+                return existe;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public Estado GetEstadoPorId(int id)
@@ -53,7 +88,19 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Modelos
 
         public void Guardar(Estado estado)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioEstados(_conexionBd.AbrirConexion());
+                _repositorio.Guardar(estado);
+                _conexionBd.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

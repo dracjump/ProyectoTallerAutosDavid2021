@@ -21,17 +21,53 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Modelos
         }
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioMarcas(_conexionBd.AbrirConexion());
+                _repositorio.Borrar(id);
+                _conexionBd.CerrarConexion();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool EstaRelacionado(MarcaAuto marca)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioMarcas(_conexionBd.AbrirConexion());
+                var estaRelacionado = _repositorio.EstaRelacionado(marca);
+                _conexionBd.CerrarConexion();
+                return estaRelacionado;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(MarcaAuto marca)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioMarcas(_conexionBd.AbrirConexion());
+                var existe = _repositorio.Existe(marca);
+                _conexionBd.CerrarConexion();
+                return existe;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+
         }
 
         public List<MarcaAuto> GetLista()
@@ -57,7 +93,19 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Modelos
 
         public void Guardar(MarcaAuto marca)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioMarcas(_conexionBd.AbrirConexion());
+                _repositorio.Guardar(marca);
+                _conexionBd.CerrarConexion();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
     }
 }

@@ -19,17 +19,69 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Clientes
 
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string cadenaComando = "DELETE FROM TiposDeDocumentos WHERE TipoDeDocumentoId=@id";
+                SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@id", id);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            };
         }
 
         public bool EstaRelacionado(TipoDocumento tipoDocumento)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var cadenaComando = "SELECT COUNT(*) FROM Clientes WHERE TipoDeDocumentoId=@id";
+                var comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@id", tipoDocumento.TipoDeDocumentoId);
+                int cantidadRegistros = (int)comando.ExecuteScalar();
+                if (cantidadRegistros > 0)
+                {
+                    return true;
+                }
+                return false;
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(TipoDocumento tipoDocumento)
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlCommand comando;
+                if (tipoDocumento.TipoDeDocumentoId == 0)
+                {
+                    string cadenaComando = "SELECT TipoDeDocumentoId,Descripcion FROM TiposDeDocumentos WHERE Descripcion=@nombre";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", tipoDocumento.Descripcion);
+                }
+                else
+                {
+                    string cadenaComando = "SELECT TipoDeDocumentoId,Descripcion FROM TiposDeDocumentos WHERE Descripcion=@nombre AND TipoDeDocumentoId<>@id";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", tipoDocumento.Descripcion);
+                    comando.Parameters.AddWithValue("@id", tipoDocumento.TipoDeDocumentoId);
+                }
+                SqlDataReader reader = comando.ExecuteReader();
+                return reader.HasRows;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public List<TipoDocumento> GetLista()
@@ -73,7 +125,32 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Clientes
 
         public void Guardar(TipoDocumento tipoDocumento)
         {
-            throw new NotImplementedException();
+            if (tipoDocumento.TipoDeDocumentoId == 0) //Si no extiste tipoDoc, entonces me va a agregar uno.
+            {//Nuevo tipoDoc
+                try
+                {
+                    string cadenaComando = "INSERT INTO TiposDeDocumentos VALUES(@nombre)";
+                    SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", tipoDocumento.Descripcion);
+                    comando.ExecuteNonQuery();
+                    cadenaComando = "SELECT @@IDENTITY";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    tipoDocumento.TipoDeDocumentoId = (int)(decimal)comando.ExecuteScalar();
+                }
+                catch (Exception e)
+                {
+
+                    throw new Exception(e.Message);
+                }
+            }
+            else
+            {//Editar tipoDoc
+                string cadenaComando = "UPDATE TiposDeDocumentos SET Descripcion=@nombre WHERE TipoDeDocumentoId=@id ";
+                SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@nombre", tipoDocumento.Descripcion);
+                comando.Parameters.AddWithValue("@id", tipoDocumento.TipoDeDocumentoId);
+                comando.ExecuteNonQuery();
+            }
         }
     }
 }

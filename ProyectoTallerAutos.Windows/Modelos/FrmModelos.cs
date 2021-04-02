@@ -38,5 +38,10 @@ namespace ProyectoTallerAutos.Windows.Modelos
             frmTipoVehiculo frm = new frmTipoVehiculo();
             frm.ShowDialog(this);
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

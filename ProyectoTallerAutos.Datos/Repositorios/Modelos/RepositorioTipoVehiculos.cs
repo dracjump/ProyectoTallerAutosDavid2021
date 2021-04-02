@@ -18,17 +18,68 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Modelos
         }
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string cadenaComando = "DELETE FROM TiposDeVehiculos WHERE TipoDeVehiculoId=@id";
+                SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@id", id);
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            };
         }
 
         public bool EstaRelacionado(TipoVehiculo tipo)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var cadenaComando = "SELECT COUNT(*) FROM Modelos WHERE TipoDeVehiculoId=@id";
+                var comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@id", tipo.TipoVehiculoId);
+                int cantidadRegistros = (int)comando.ExecuteScalar();
+                if (cantidadRegistros > 0)
+                {
+                    return true;
+                }
+                return false;
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(TipoVehiculo tipo)
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlCommand comando;
+                if (tipo.TipoVehiculoId == 0)
+                {
+                    string cadenaComando = "SELECT TipoDeVehiculoId,Descripcion FROM TiposDeVehiculos WHERE Descripcion=@nombre";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", tipo.Descripcion);
+                }
+                else
+                {
+                    string cadenaComando = "SELECT TipoDeVehiculoId,Descripcion FROM TiposDeVehiculos WHERE Descripcion=@nombre AND TipoDeVehiculoId<>@id ";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", tipo.Descripcion);
+                    comando.Parameters.AddWithValue("@id", tipo.TipoVehiculoId);
+                }
+                SqlDataReader reader = comando.ExecuteReader();
+                return reader.HasRows;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public List<TipoVehiculo> GetLista()
@@ -72,7 +123,32 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Modelos
 
         public void Guardar(TipoVehiculo tipo)
         {
-            throw new NotImplementedException();
+            if (tipo.TipoVehiculoId == 0) //Si no extiste TIpo, entonces me va a agregar uno.
+            {//Nuevo Tipo
+                try
+                {
+                    string cadenaComando = "INSERT INTO TiposDeVehiculos VALUES(@nombre)";
+                    SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", tipo.Descripcion);
+                    comando.ExecuteNonQuery();
+                    cadenaComando = "SELECT @@IDENTITY";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    tipo.TipoVehiculoId = (int)(decimal)comando.ExecuteScalar();
+                }
+                catch (Exception e)
+                {
+
+                    throw new Exception(e.Message);
+                }
+            }
+            else
+            {//Editar Tipo
+                string cadenaComando = "UPDATE TiposDeVehiculos SET Descripcion=@nombre WHERE TipoDeVehiculoId=@id ";
+                SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@nombre", tipo.Descripcion);
+                comando.Parameters.AddWithValue("@id", tipo.TipoVehiculoId);
+                comando.ExecuteNonQuery();
+            }
         }
     }
 }

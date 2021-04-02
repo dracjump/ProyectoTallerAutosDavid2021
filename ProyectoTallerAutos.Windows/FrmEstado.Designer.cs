@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvEstados = new System.Windows.Forms.DataGridView();
+            this.cmnEstados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeDocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,6 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.cmnEstados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -61,6 +61,8 @@
             // 
             this.dgvEstados.AllowUserToAddRows = false;
             this.dgvEstados.AllowUserToDeleteRows = false;
+            this.dgvEstados.AllowUserToResizeColumns = false;
+            this.dgvEstados.AllowUserToResizeRows = false;
             this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnEstados});
@@ -74,6 +76,14 @@
             this.dgvEstados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEstados.Size = new System.Drawing.Size(612, 434);
             this.dgvEstados.TabIndex = 0;
+            // 
+            // cmnEstados
+            // 
+            this.cmnEstados.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnEstados.HeaderText = "Estados";
+            this.cmnEstados.MinimumWidth = 6;
+            this.cmnEstados.Name = "cmnEstados";
+            this.cmnEstados.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -121,6 +131,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(47, 37);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -130,6 +141,7 @@
             this.btnEditar.Size = new System.Drawing.Size(47, 37);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBuscar
             // 
@@ -176,14 +188,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(47, 37);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.UseVisualStyleBackColor = false;
-            // 
-            // cmnEstados
-            // 
-            this.cmnEstados.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnEstados.HeaderText = "Estados";
-            this.cmnEstados.MinimumWidth = 6;
-            this.cmnEstados.Name = "cmnEstados";
-            this.cmnEstados.ReadOnly = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmEstado
             // 

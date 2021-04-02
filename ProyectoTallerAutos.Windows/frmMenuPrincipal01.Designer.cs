@@ -32,7 +32,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeViehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provinciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fichaDeAutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,43 +80,89 @@
             // 
             // modelosToolStripMenuItem
             // 
+            this.modelosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.marcasToolStripMenuItem,
+            this.tiposDeViehiculosToolStripMenuItem});
             this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
-            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.modelosToolStripMenuItem.Text = "Modelos";
+            // 
+            // marcasToolStripMenuItem
+            // 
+            this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.marcasToolStripMenuItem.Text = "Marcas";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
+            // 
+            // tiposDeViehiculosToolStripMenuItem
+            // 
+            this.tiposDeViehiculosToolStripMenuItem.Name = "tiposDeViehiculosToolStripMenuItem";
+            this.tiposDeViehiculosToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.tiposDeViehiculosToolStripMenuItem.Text = "Tipos De Viehiculos";
+            this.tiposDeViehiculosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeViehiculosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.localidadesToolStripMenuItem,
+            this.provinciasToolStripMenuItem,
+            this.tiposDeDocumentosToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // localidadesToolStripMenuItem
+            // 
+            this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.localidadesToolStripMenuItem.Text = "Localidades";
+            this.localidadesToolStripMenuItem.Click += new System.EventHandler(this.localidadesToolStripMenuItem_Click);
+            // 
+            // provinciasToolStripMenuItem
+            // 
+            this.provinciasToolStripMenuItem.Name = "provinciasToolStripMenuItem";
+            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.provinciasToolStripMenuItem.Text = "Provincias";
+            this.provinciasToolStripMenuItem.Click += new System.EventHandler(this.provinciasToolStripMenuItem_Click);
+            // 
+            // tiposDeDocumentosToolStripMenuItem
+            // 
+            this.tiposDeDocumentosToolStripMenuItem.Name = "tiposDeDocumentosToolStripMenuItem";
+            this.tiposDeDocumentosToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.tiposDeDocumentosToolStripMenuItem.Text = "Tipos de documentos";
+            this.tiposDeDocumentosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeDocumentosToolStripMenuItem_Click);
             // 
             // fichaDeAutosToolStripMenuItem
             // 
             this.fichaDeAutosToolStripMenuItem.Name = "fichaDeAutosToolStripMenuItem";
-            this.fichaDeAutosToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.fichaDeAutosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fichaDeAutosToolStripMenuItem.Text = "Ficha de Autos";
+            this.fichaDeAutosToolStripMenuItem.Click += new System.EventHandler(this.fichaDeAutosToolStripMenuItem_Click);
             // 
             // estadosToolStripMenuItem
             // 
             this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
-            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.estadosToolStripMenuItem.Text = "Estados";
+            this.estadosToolStripMenuItem.Click += new System.EventHandler(this.estadosToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Starcraft", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(886, 13);
+            this.label1.Location = new System.Drawing.Point(856, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.Size = new System.Drawing.Size(132, 12);
             this.label1.TabIndex = 4;
-            this.label1.Text = "By DRAC";
+            this.label1.Text = "By DRAC V1.2";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button4
             // 
@@ -159,6 +210,7 @@
             this.btnFichaAutos.Text = "Ficha de Autos";
             this.btnFichaAutos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFichaAutos.UseVisualStyleBackColor = false;
+            this.btnFichaAutos.Click += new System.EventHandler(this.btnFichaAutos_Click);
             // 
             // btnClientes
             // 
@@ -246,6 +298,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnEstados;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeViehiculosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem provinciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeDocumentosToolStripMenuItem;
     }
 }
 

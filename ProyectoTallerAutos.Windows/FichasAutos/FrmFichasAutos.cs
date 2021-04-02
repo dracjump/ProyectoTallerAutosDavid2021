@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTallerAutos.Windows.Clientes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoTallerAutos.Windows.Clientes
+namespace ProyectoTallerAutos.Windows.FichasAutos
 {
     public partial class FrmFichasAutos : MetroFramework.Forms.MetroForm
     {
@@ -22,10 +23,11 @@ namespace ProyectoTallerAutos.Windows.Clientes
             Close();
         }
 
-        private void tiposDeDocToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void FrmFichasAutos_Load(object sender, EventArgs e)
         {
-            frmTipoDoc frm = new frmTipoDoc();
-            frm.ShowDialog(this);
+
         }
     }
 }

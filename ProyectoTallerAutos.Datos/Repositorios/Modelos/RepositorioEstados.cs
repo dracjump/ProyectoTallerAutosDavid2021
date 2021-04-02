@@ -18,17 +18,69 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Modelos
         }
         public void Borrar(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string cadenaComando = "DELETE FROM Estados WHERE EstadoId=@id";
+                SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@id", id);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            };
         }
 
         public bool EstaRelacionado(Estado estado)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var cadenaComando = "SELECT COUNT(*) FROM FichasdeAutos WHERE EstadoId=@id";
+                var comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@id", estado.EstadoId);
+                int cantidadRegistros = (int)comando.ExecuteScalar();
+                if (cantidadRegistros > 0)
+                {
+                    return true;
+                }
+                return false;
+
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public bool Existe(Estado estado)
         {
-            throw new NotImplementedException();
+            try
+            {
+                SqlCommand comando;
+                if (estado.EstadoId == 0)
+                {
+                    string cadenaComando = "SELECT EstadoId,Descripcion FROM Estados WHERE Descripcion=@nombre";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", estado.Descripcion);
+                }
+                else
+                {
+                    string cadenaComando = "SELECT EstadoId,Descripcion FROM Estados WHERE Descripcion=@nombre AND EstadoId<>@id";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", estado.Descripcion);
+                    comando.Parameters.AddWithValue("@id", estado.EstadoId);
+                }
+                SqlDataReader reader = comando.ExecuteReader();
+                return reader.HasRows;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public Estado GetEstadoPorId(int id)
@@ -71,7 +123,32 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Modelos
 
         public void Guardar(Estado estado)
         {
-            throw new NotImplementedException();
+            if (estado.EstadoId == 0) //Si no extiste estado, entonces me va a agregar uno.
+            {//Nueva marca
+                try
+                {
+                    string cadenaComando = "INSERT INTO Estados VALUES(@nombre)";
+                    SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    comando.Parameters.AddWithValue("@nombre", estado.Descripcion);
+                    comando.ExecuteNonQuery();
+                    cadenaComando = "SELECT @@IDENTITY";
+                    comando = new SqlCommand(cadenaComando, _sqlConnection);
+                    estado.EstadoId = (int)(decimal)comando.ExecuteScalar();
+                }
+                catch (Exception e)
+                {
+
+                    throw new Exception(e.Message);
+                }
+            }
+            else
+            {//Editar Estado
+                string cadenaComando = "UPDATE Estados SET Descripcion=@nombre WHERE EstadoId=@id ";
+                SqlCommand comando = new SqlCommand(cadenaComando, _sqlConnection);
+                comando.Parameters.AddWithValue("@nombre", estado.Descripcion);
+                comando.Parameters.AddWithValue("@id", estado.EstadoId);
+                comando.ExecuteNonQuery();
+            };
         }
     }
 }
