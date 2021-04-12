@@ -143,6 +143,16 @@ namespace ProyectoTallerAutos.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap person_50px {
+            get {
+                object obj = ResourceManager.GetObject("person_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus_25px {
             get {
                 object obj = ResourceManager.GetObject("plus_25px", resourceCulture);

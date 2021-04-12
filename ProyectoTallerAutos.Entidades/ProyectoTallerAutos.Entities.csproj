@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\Clientes\ClienteDto.cs" />
+    <Compile Include="DTOs\FichaAuto\FichaAutoDto.cs" />
     <Compile Include="DTOs\Localidad\LocalidadDto.cs" />
+    <Compile Include="DTOs\Modelos\ModeloDto.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Entidades\FichaAuto.cs" />
     <Compile Include="Entidades\Localidad.cs" />
     <Compile Include="Entidades\MarcaAuto.cs" />
     <Compile Include="Entidades\Modelo.cs" />

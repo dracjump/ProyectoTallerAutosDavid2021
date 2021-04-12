@@ -1,16 +1,13 @@
-﻿using ProyectoTallerAutos.Entidades.Entidades;
-using System;
+﻿using ProyectoTallerAutos.Entidades.DTOs.Modelos;
+using ProyectoTallerAutos.Entidades.Entidades;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoTallerAutos.Datos.Repositorios.Modelos.Interfaces
 {
-    public interface IRepositorioAutos
+    public interface IRepositorioModelos
     {
         Modelo GetModeloPorId(int id);
-        List<Modelo> GetLista();
+        List<ModeloDto> GetLista();
         void Guardar(Modelo marca);
         void Borrar(Modelo modelo);
         bool Existe(Modelo modelo);

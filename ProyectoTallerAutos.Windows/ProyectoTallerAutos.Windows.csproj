@@ -277,7 +277,9 @@
   <ItemGroup>
     <None Include="Resources\search_client_36px.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\person_50px.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_18px.png" />
   </ItemGroup>

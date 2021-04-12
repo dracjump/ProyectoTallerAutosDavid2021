@@ -52,11 +52,13 @@
     <Compile Include="Repositorios\Clientes\RepositorioLocalidades.cs" />
     <Compile Include="Repositorios\Clientes\RepositorioProvincias.cs" />
     <Compile Include="Repositorios\Clientes\RepositorioTipoDoc.cs" />
-    <Compile Include="Repositorios\Modelos\Interfaces\IRepositorioAutos.cs" />
+    <Compile Include="Repositorios\FichasAutos\Interfaces\IRepositorioFichaAutos.cs" />
+    <Compile Include="Repositorios\FichasAutos\RepositorioFichaAutos.cs" />
+    <Compile Include="Repositorios\Modelos\Interfaces\IRepositorioModelos.cs" />
     <Compile Include="Repositorios\Modelos\Interfaces\IRepositorioMarcas.cs" />
     <Compile Include="Repositorios\Modelos\Interfaces\IRepositorioEstados.cs" />
     <Compile Include="Repositorios\Modelos\Interfaces\IRepositorioTipoVehiculos.cs" />
-    <Compile Include="Repositorios\Modelos\RepositorioAutos.cs" />
+    <Compile Include="Repositorios\Modelos\RepositorioModelos.cs" />
     <Compile Include="Repositorios\Modelos\RepositorioEstados.cs" />
     <Compile Include="Repositorios\Modelos\RepositorioMarcas.cs" />
     <Compile Include="Repositorios\Modelos\RepositorioTipoVehiculos.cs" />

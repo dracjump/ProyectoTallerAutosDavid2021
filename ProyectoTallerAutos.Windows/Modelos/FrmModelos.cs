@@ -1,4 +1,8 @@
-﻿using System;
+﻿using ProyectoTallerAutos.Entidades.DTOs.Modelos;
+using ProyectoTallerAutos.Entidades.Entidades;
+using ProyectoTallerAutos.Servicios.Servicios.Modelos;
+using ProyectoTallerAutos.Servicios.Servicios.Modelos.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +20,8 @@ namespace ProyectoTallerAutos.Windows.Modelos
         {
             InitializeComponent();
         }
+        private IServicioModelos _servicios;
+        private List<ModeloDto> _lista;
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -24,9 +30,49 @@ namespace ProyectoTallerAutos.Windows.Modelos
 
         private void frmModelos_Load(object sender, EventArgs e)
         {
+            try
+            {
+                _servicios = new ServicioModelos();
+                _lista = _servicios.GetLista();
+                MostrarEnGrilla();
+            }
+            catch (Exception ex)
+            {
 
+                throw new Exception(ex.Message);
+            }
         }
 
+        private void MostrarEnGrilla()
+        {
+            dgvModelos.Rows.Clear();
+            foreach (var modeloDto in _lista)
+            {
+                DataGridViewRow r = ConstruirFila();
+                SetearFila(r, modeloDto);
+                AgregarFila(r);
+            }
+        }
+
+        private void AgregarFila(DataGridViewRow r)
+        {
+            dgvModelos.Rows.Add(r);
+        }
+
+        private void SetearFila(DataGridViewRow r, ModeloDto modeloDto)
+        {
+            r.Cells[cmnMarcas.Index].Value = modeloDto.marcaAuto ;
+            r.Cells[cmnTipoVehiculo.Index].Value = modeloDto.tipoVehiculo;
+            r.Cells[cmnModelo.Index].Value = modeloDto.nomModelo;
+            r.Tag = modeloDto;
+        }
+
+        private DataGridViewRow ConstruirFila()
+        {
+            DataGridViewRow r = new DataGridViewRow();
+            r.CreateCells(dgvModelos);
+            return r;
+        }
         private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMarcas frm = new frmMarcas();

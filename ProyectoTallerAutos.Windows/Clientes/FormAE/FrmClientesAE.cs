@@ -26,5 +26,10 @@ namespace ProyectoTallerAutos.Windows.Clientes.FormAE
         {
             Close();
         }
+
+        private void txbApellido_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

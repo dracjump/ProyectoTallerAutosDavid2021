@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProyectoTallerAutos.Entidades.Entidades
+﻿namespace ProyectoTallerAutos.Entidades.Entidades
 {
     public class Modelo
     {
+        public int ModeloId { get; set; }
+        public MarcaAuto marcaAuto { get; set; }
+        public TipoVehiculo tipoVehiculo { get; set; }
+        public string nomModelo { get; set; }
     }
 }

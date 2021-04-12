@@ -1,4 +1,8 @@
-﻿using ProyectoTallerAutos.Entidades.Entidades;
+﻿using ProyectoTallerAutos.Datos;
+using ProyectoTallerAutos.Datos.Repositorios.Clientes;
+using ProyectoTallerAutos.Datos.Repositorios.Clientes.Interfaces;
+using ProyectoTallerAutos.Entidades.DTOs.Clientes;
+using ProyectoTallerAutos.Entidades.Entidades;
 using ProyectoTallerAutos.Servicios.Servicios.Clientes.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,6 +14,12 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Clientes
 {
     public class ServicioClientes : IServicioClientes
     {
+        private IRepositorioClientes _repositorio;
+        private ConexionBd _conexionBd;
+        public ServicioClientes()
+        {
+
+        }
         public void Borrar(int id)
         {
             throw new NotImplementedException();
@@ -30,9 +40,20 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Clientes
             throw new NotImplementedException();
         }
 
-        public List<Cliente> GetLista()
+        public List<ClienteDto> GetLista()
         {
-            throw new NotImplementedException();
+            try
+            {
+                _conexionBd = new ConexionBd();
+                _repositorio = new RepositorioClientes(_conexionBd.AbrirConexion());
+                var lista = _repositorio.GetLista();
+                return lista;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
         }
 
         public void Guardar(Cliente cliente)

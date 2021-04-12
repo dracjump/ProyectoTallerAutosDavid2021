@@ -50,6 +50,8 @@
     <Compile Include="Servicios\Clientes\ServicioLocalidades.cs" />
     <Compile Include="Servicios\Clientes\ServicioProvincias.cs" />
     <Compile Include="Servicios\Clientes\ServicioTipoDoc.cs" />
+    <Compile Include="Servicios\FichasAutos\Interfaces\IServicioFichaAutos.cs" />
+    <Compile Include="Servicios\FichasAutos\ServicioFichaAutos.cs" />
     <Compile Include="Servicios\Modelos\Interfaces\IServicioEstados.cs" />
     <Compile Include="Servicios\Modelos\Interfaces\IServicioMarcas.cs" />
     <Compile Include="Servicios\Modelos\Interfaces\IServicioModelos.cs" />

@@ -63,7 +63,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(25, 75);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(950, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(950, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,7 +75,7 @@
             this.fichaDeAutosToolStripMenuItem,
             this.estadosToolStripMenuItem});
             this.archivosToolStripMenuItem.Name = "archivosToolStripMenuItem";
-            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.archivosToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.archivosToolStripMenuItem.Text = "Archivos";
             // 
             // modelosToolStripMenuItem
@@ -84,7 +84,7 @@
             this.marcasToolStripMenuItem,
             this.tiposDeViehiculosToolStripMenuItem});
             this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
-            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modelosToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.modelosToolStripMenuItem.Text = "Modelos";
             // 
             // marcasToolStripMenuItem
@@ -108,7 +108,7 @@
             this.provinciasToolStripMenuItem,
             this.tiposDeDocumentosToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // localidadesToolStripMenuItem
@@ -135,21 +135,21 @@
             // fichaDeAutosToolStripMenuItem
             // 
             this.fichaDeAutosToolStripMenuItem.Name = "fichaDeAutosToolStripMenuItem";
-            this.fichaDeAutosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.fichaDeAutosToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.fichaDeAutosToolStripMenuItem.Text = "Ficha de Autos";
             this.fichaDeAutosToolStripMenuItem.Click += new System.EventHandler(this.fichaDeAutosToolStripMenuItem_Click);
             // 
             // estadosToolStripMenuItem
             // 
             this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
-            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.estadosToolStripMenuItem.Text = "Estados";
             this.estadosToolStripMenuItem.Click += new System.EventHandler(this.estadosToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(52, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -159,9 +159,9 @@
             this.label1.Font = new System.Drawing.Font("Starcraft", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(856, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 12);
+            this.label1.Size = new System.Drawing.Size(131, 12);
             this.label1.TabIndex = 4;
-            this.label1.Text = "By DRAC V1.2";
+            this.label1.Text = "By DRAC V1.3";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button4

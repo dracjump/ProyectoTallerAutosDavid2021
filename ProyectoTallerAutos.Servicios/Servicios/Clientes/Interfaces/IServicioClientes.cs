@@ -1,4 +1,5 @@
-﻿using ProyectoTallerAutos.Entidades.Entidades;
+﻿using ProyectoTallerAutos.Entidades.DTOs.Clientes;
+using ProyectoTallerAutos.Entidades.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace ProyectoTallerAutos.Servicios.Servicios.Clientes.Interfaces
     public interface IServicioClientes
     {
         Cliente GetClientePorId(int id);
-        List<Cliente> GetLista();
+        List<ClienteDto> GetLista();
         void Guardar(Cliente cliente);
         void Borrar(int id);
         bool Existe(Cliente cliente);

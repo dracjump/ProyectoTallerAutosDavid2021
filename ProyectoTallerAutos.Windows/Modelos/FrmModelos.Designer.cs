@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvModelos = new System.Windows.Forms.DataGridView();
+            this.cmnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnMarcas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmnTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,9 +46,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.cmnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnMarcas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmnTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModelos)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -64,11 +66,21 @@
             this.dgvModelos.AllowUserToDeleteRows = false;
             this.dgvModelos.AllowUserToResizeColumns = false;
             this.dgvModelos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvModelos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvModelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModelos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cmnModelo,
             this.cmnMarcas,
             this.cmnTipoVehiculo});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvModelos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvModelos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvModelos.Location = new System.Drawing.Point(0, 0);
             this.dgvModelos.Name = "dgvModelos";
@@ -79,6 +91,30 @@
             this.dgvModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvModelos.Size = new System.Drawing.Size(865, 619);
             this.dgvModelos.TabIndex = 0;
+            // 
+            // cmnModelo
+            // 
+            this.cmnModelo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnModelo.HeaderText = "Modelo";
+            this.cmnModelo.MinimumWidth = 6;
+            this.cmnModelo.Name = "cmnModelo";
+            this.cmnModelo.ReadOnly = true;
+            // 
+            // cmnMarcas
+            // 
+            this.cmnMarcas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnMarcas.HeaderText = "Marca";
+            this.cmnMarcas.MinimumWidth = 6;
+            this.cmnMarcas.Name = "cmnMarcas";
+            this.cmnMarcas.ReadOnly = true;
+            // 
+            // cmnTipoVehiculo
+            // 
+            this.cmnTipoVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cmnTipoVehiculo.HeaderText = "Tipo de Vehiculo";
+            this.cmnTipoVehiculo.MinimumWidth = 6;
+            this.cmnTipoVehiculo.Name = "cmnTipoVehiculo";
+            this.cmnTipoVehiculo.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -178,30 +214,6 @@
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // cmnModelo
-            // 
-            this.cmnModelo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnModelo.HeaderText = "Modelo";
-            this.cmnModelo.MinimumWidth = 6;
-            this.cmnModelo.Name = "cmnModelo";
-            this.cmnModelo.ReadOnly = true;
-            // 
-            // cmnMarcas
-            // 
-            this.cmnMarcas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnMarcas.HeaderText = "Marca";
-            this.cmnMarcas.MinimumWidth = 6;
-            this.cmnMarcas.Name = "cmnMarcas";
-            this.cmnMarcas.ReadOnly = true;
-            // 
-            // cmnTipoVehiculo
-            // 
-            this.cmnTipoVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cmnTipoVehiculo.HeaderText = "Tipo de Vehiculo";
-            this.cmnTipoVehiculo.MinimumWidth = 6;
-            this.cmnTipoVehiculo.Name = "cmnTipoVehiculo";
-            this.cmnTipoVehiculo.ReadOnly = true;
             // 
             // frmModelos
             // 

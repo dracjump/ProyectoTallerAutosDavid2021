@@ -104,7 +104,7 @@ namespace ProyectoTallerAutos.Datos.Repositorios.Clientes
             catch (Exception e)
             {
 
-                throw new Exception("Error al leer las ciudades");
+                throw new Exception("Error al leer las ciudadees");
             }
         }
 
